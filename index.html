@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Современная веб-студия</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <style>
+    :root {
+      --primary: #2a5d9f;
+      --secondary: #4ca1af;
+      --accent: #f8b400;
+      --bg-light: #f6f8fa;
+      --text-dark: #333;
+      --white: #fff;
+      font-size: 10px;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      margin: 0;
+      background-color: var(--bg-light);
+      font-size: 1.6rem;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: var(--primary);
+      color: var(--white);
+      padding: 1.2rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0.4rem 1rem rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      font-size: 2.2rem;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    section {
+      padding: 7rem 2rem;
+      max-width: 120rem;
+      margin: auto;
+    }
+
+    .hero {
+      background: linear-gradient(120deg, var(--primary), var(--secondary));
+      color: var(--white);
+      text-align: center;
+      padding: 10rem 2rem 7rem;
+    }
+
+    .hero__image {
+      width: 90%;
+      max-width: 700px;
+      border-radius: 1.5rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 0.5rem 2rem rgba(0,0,0,0.25);
+    }
+
+    .hero__title {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero__subtitle {
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+    }
+
+    .hero__button {
+      padding: 1.4rem 3rem;
+      background: var(--accent);
+      color: var(--white);
+      border-radius: 4rem;
+      font-size: 1.6rem;
+      transition: 0.3s;
+    }
+
+    .hero__button:hover {
+      background: #e5a100;
+    }
+
+    .why__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 3rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    .why__item {
+      background: var(--white);
+      padding: 3rem 2rem;
+      border-radius: 1rem;
+      width: 30rem;
+      box-shadow: 0 0.3rem 1rem rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .why__item:hover {
+      transform: translateY(-0.5rem);
+    }
+
+    .why__icon {
+      width: 7rem;
+      margin-bottom: 1rem;
+    }
+
+    .catalog__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+
+    .catalog__item {
+      background: var(--white);
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 0.3rem 1rem rgba(0,0,0,0.1);
+    }
+
+    .catalog__img {
+      width: 100%;
+      height: 20rem;
+      object-fit: cover;
+    }
+
+    .catalog__info {
+      padding: 2rem;
+    }
+
+    .catalog__price {
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .contacts__map {
+      width: 100%;
+      height: 400px;
+      border-radius: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🌐 WebStudio</div>
+  <nav>
+    <a href="#hero">Главная</a>
+    <a href="#why">Преимущества</a>
+    <a href="#catalog">Каталог</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+</header>
+
+<section class="hero" id="hero">
+  <img class="hero__image" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80" alt="Веб-дизайн команда">
+  <h1 class="hero__title">Создаём современные сайты</h1>
+  <p class="hero__subtitle">Адаптивный дизайн, чистый код и отличная поддержка</p>
+  <a href="#catalog" class="hero__button">Наши услуги</a>
+</section>
+
+<section class="why" id="why">
+  <h2>Почему выбирают нас</h2>
+  <ul class="why__list">
+    <li class="why__item">
+      <img class="why__icon" src="https://cdn-icons-png.flaticon.com/512/992/992651.png" alt="Скорость">
+      <h3>Быстро и качественно</h3>
+      <p>Мы создаём проекты в срок без компромиссов по качеству.</p>
+    </li>
+    <li class="why__item">
+      <img class="why__icon" src="https://cdn-icons-png.flaticon.com/512/4299/4299934.png" alt="UI">
+      <h3>Современный дизайн</h3>
+      <p>Наши интерфейсы сочетают эстетику и удобство.</p>
+    </li>
+    <li class="why__item">
+      <img class="why__icon" src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Support">
+      <h3>Поддержка 24/7</h3>
+      <p>Вы всегда можете рассчитывать на помощь команды.</p>
+    </li>
+  </ul>
+</section>
+
+<section class="catalog" id="catalog">
+  <h2>Наши услуги</h2>
+  <div class="catalog__grid">
+    <div class="catalog__item">
+      <img class="catalog__img" src="https://images.unsplash.com/photo-1522204503500-7ea6b944b24a?auto=format&fit=crop&w=800&q=80" alt="Разработка сайтов">
+      <div class="catalog__info">
+        <h3>Разработка сайтов</h3>
+        <p>Создаём адаптивные сайты любой сложности.</p>
+        <p class="catalog__price">от 50 000 ₸</p>
+      </div>
+    </div>
+    <div class="catalog__item">
+      <img class="catalog__img" src="https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=800&q=80" alt="SEO">
+      <div class="catalog__info">
+        <h3>SEO-оптимизация</h3>
+        <p>Повышаем видимость и позиции вашего сайта.</p>
+        <p class="catalog__price">от 35 000 ₸</p>
+      </div>
+    </div>
+    <div class="catalog__item">
+      <img class="catalog__img" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Дизайн">
+      <div class="catalog__info">
+        <h3>Брендинг и дизайн</h3>
+        <p>Создаём стильный фирменный облик бренда.</p>
+        <p class="catalog__price">от 40 000 ₸</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contacts" id="contacts">
+  <h2>Контакты</h2>
+  <p style="text-align:center;">📍 Астана, Казахстан<br>📞 +7 (701) 123-45-67<br>✉️ info@studio.kz</p>
+  <iframe class="contacts__map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.056146479927!2d71.43543751593157!3d51.12858597957196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4245854a5f8b1cf3%3A0x3f7e7dc0d72b24!2z0J7QntCe0KMg0JrQvtC80L_Rj9GC!5e0!3m2!1sru!2skz!4v1633001234567!5m2!1sru!2skz"
+    allowfullscreen=""
+    loading="lazy"></iframe>
+</section>
+
+<footer>© 2025 Все права защищены. Разработано в Астане.</footer>
+
+</body>
+</html>
